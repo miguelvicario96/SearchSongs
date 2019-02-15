@@ -20,17 +20,22 @@ class ViewController: UIViewController {
         searchButton.layer.cornerRadius = 10
         searchButton.layer.masksToBounds = true
 
+        artistTextField?.delegate = self
+        songTextField?.delegate = self
     }
 
     @IBAction func searchSong(_ sender: UIButton) {
-        SongService.fetchLyrics(artist: artistTextField?.text ?? "", title: songTextField?.text ?? "")
+        let artist = artistTextField?.text?.replacingOccurrences(of: " ", with: "_")
+        let title = songTextField?.text?.replacingOccurrences(of: " ", with: "_")
+        SongService.fetchLyrics(artist: artist ?? "", title: title ?? "")
         {(result: Song) in
             DispatchQueue.main.async {
                 if result.lyrics == "" {
-                    let alert = UIAlertController(title: "Error",
-                                                  message: "No se encontro letra",
+                    let alert = UIAlertController(title: "No se encontro letra",
+                                                  message: "",
                                                   preferredStyle: .alert)
-                    let okAction = UIAlertAction(title: "Ok", style: .default)
+                    let okAction = UIAlertAction(title: "Ok",
+                                                 style: .default)
                     
                     alert.addAction(okAction)
                     self.present(alert, animated: true)
@@ -39,5 +44,16 @@ class ViewController: UIViewController {
             print(result)
         }
     }
+    
+    @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
+        artistTextField?.resignFirstResponder()
+        songTextField?.resignFirstResponder()
+    }
 }
 
+extension ViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+}

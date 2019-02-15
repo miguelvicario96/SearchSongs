@@ -18,32 +18,62 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search Songs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J2Y-Fg-xQG">
-                                <rect key="frame" x="16" y="60" width="309" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" red="0.18823529411764706" green="0.8901960784313725" blue="0.792156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J2Y-Fg-xQG">
+                                <rect key="frame" x="16" y="80" width="309" height="41"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Search Songs Lyrics">
+                                        <attributes>
+                                            <color key="NSColor" red="0.18431372549019609" green="0.53725490196078429" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="30" name="AvenirNextCondensed-Heavy"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingresa un Artista" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OOm-Rr-Wq5">
-                                <rect key="frame" x="16" y="171" width="343" height="30"/>
-                                <color key="textColor" red="0.18431372549019609" green="0.53725490196078429" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <rect key="frame" x="16" y="192" width="343" height="30"/>
+                                <color key="textColor" red="0.18823529411764706" green="0.8901960784313725" blue="0.792156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingresa una Canción" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4KL-Ll-6DG">
-                                <rect key="frame" x="16" y="221" width="343" height="30"/>
-                                <color key="textColor" red="0.18431372549019609" green="0.53725490196078429" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <rect key="frame" x="16" y="268" width="343" height="30"/>
+                                <color key="textColor" red="0.18823529411764706" green="0.8901960784313725" blue="0.792156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EBt-UG-2SU">
+                                <rect key="frame" x="16" y="161" width="343" height="28"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Singer">
+                                        <attributes>
+                                            <color key="NSColor" red="0.18431372549019609" green="0.53725490196078429" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="20" name="AvenirNext-Regular"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GTZ-i0-l6w">
+                                <rect key="frame" x="16" y="237" width="343" height="28"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Song">
+                                        <attributes>
+                                            <color key="NSColor" red="0.18431372549019609" green="0.53725490196078429" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="20" name="AvenirNext-Regular"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qjf-53-ubS">
-                                <rect key="frame" x="112" y="321" width="150" height="40"/>
+                                <rect key="frame" x="112" y="348" width="150" height="40"/>
                                 <color key="backgroundColor" red="0.25098039215686274" green="0.31764705882352939" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="Qjf-53-ubS" secondAttribute="height" multiplier="15:4" id="JLU-xZ-ygv"/>
+                                    <constraint firstAttribute="width" secondItem="Qjf-53-ubS" secondAttribute="height" multiplier="15:4" id="uC0-ev-L9p"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Buscar">
+                                <state key="normal" title="Search">
                                     <color key="titleColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -52,21 +82,31 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="OOm-Rr-Wq5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="C9o-ss-5VY"/>
-                            <constraint firstItem="4KL-Ll-6DG" firstAttribute="top" secondItem="OOm-Rr-Wq5" secondAttribute="bottom" constant="20" id="CAf-dL-Q4J"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qjf-53-ubS" secondAttribute="trailing" constant="113" id="ORg-xB-Rqa"/>
-                            <constraint firstItem="OOm-Rr-Wq5" firstAttribute="top" secondItem="J2Y-Fg-xQG" secondAttribute="bottom" constant="75" id="Oq3-Og-cAs"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4KL-Ll-6DG" secondAttribute="trailing" constant="16" id="Uff-nK-Rq0"/>
-                            <constraint firstItem="Qjf-53-ubS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="112" id="UqM-tR-bS1"/>
+                            <constraint firstItem="GTZ-i0-l6w" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="3bX-Xg-EXS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4KL-Ll-6DG" secondAttribute="trailing" constant="16" id="GDu-FR-evA"/>
+                            <constraint firstItem="EBt-UG-2SU" firstAttribute="top" secondItem="J2Y-Fg-xQG" secondAttribute="bottom" constant="40" id="GI8-IH-9kT"/>
+                            <constraint firstItem="GTZ-i0-l6w" firstAttribute="top" secondItem="OOm-Rr-Wq5" secondAttribute="bottom" constant="15" id="H4m-Mt-01v"/>
+                            <constraint firstItem="EBt-UG-2SU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="NPg-GC-fbm"/>
+                            <constraint firstItem="OOm-Rr-Wq5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="TBX-aL-J7F"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EBt-UG-2SU" secondAttribute="trailing" constant="16" id="Us3-nN-hwr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="J2Y-Fg-xQG" secondAttribute="trailing" constant="50" id="YCA-cU-Ocn"/>
-                            <constraint firstItem="4KL-Ll-6DG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="gjT-m5-DuT"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OOm-Rr-Wq5" secondAttribute="trailing" constant="16" id="h55-7M-f2W"/>
+                            <constraint firstItem="4KL-Ll-6DG" firstAttribute="top" secondItem="GTZ-i0-l6w" secondAttribute="bottom" constant="3" id="awe-Ke-ExP"/>
+                            <constraint firstItem="Qjf-53-ubS" firstAttribute="top" secondItem="4KL-Ll-6DG" secondAttribute="bottom" constant="50" id="bEV-B3-8eH"/>
                             <constraint firstItem="J2Y-Fg-xQG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="jpb-ea-Ldo"/>
-                            <constraint firstItem="Qjf-53-ubS" firstAttribute="top" secondItem="4KL-Ll-6DG" secondAttribute="bottom" constant="70" id="lHy-sS-4SE"/>
-                            <constraint firstItem="J2Y-Fg-xQG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="raj-wg-jOm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OOm-Rr-Wq5" secondAttribute="trailing" constant="16" id="o3C-5g-WI4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GTZ-i0-l6w" secondAttribute="trailing" constant="16" id="quR-XK-Oel"/>
+                            <constraint firstItem="J2Y-Fg-xQG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="raj-wg-jOm"/>
+                            <constraint firstItem="OOm-Rr-Wq5" firstAttribute="top" secondItem="EBt-UG-2SU" secondAttribute="bottom" constant="3" id="rvC-1v-kgZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qjf-53-ubS" secondAttribute="trailing" constant="113" id="s8T-G5-doV"/>
+                            <constraint firstItem="Qjf-53-ubS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="112" id="vL5-qh-aot"/>
+                            <constraint firstItem="4KL-Ll-6DG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="vhD-gU-7Co"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="d04-LB-cBK" appends="YES" id="7l1-pG-nAA"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="artistTextField" destination="OOm-Rr-Wq5" id="rgA-bU-73m"/>
@@ -75,6 +115,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="d04-LB-cBK">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="BYZ-38-t0r" id="GlB-Jb-Y9B"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="120.98950524737631"/>
         </scene>
