@@ -14,6 +14,8 @@
 		EEC2394A2216615600421026 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEC239482216615600421026 /* LaunchScreen.storyboard */; };
 		EEC239532216620400421026 /* SongService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC239522216620400421026 /* SongService.swift */; };
 		EEC23956221662D200421026 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC23955221662D200421026 /* Song.swift */; };
+		EEC2395A2217314E00421026 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC239582217314D00421026 /* DetailViewController.swift */; };
+		EEC2395B2217314E00421026 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEC239592217314E00421026 /* DetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		EEC2394B2216615600421026 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EEC239522216620400421026 /* SongService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongService.swift; sourceTree = "<group>"; };
 		EEC23955221662D200421026 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		EEC239582217314D00421026 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		EEC239592217314E00421026 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 		EEC2393E2216615500421026 /* SearchSongs */ = {
 			isa = PBXGroup;
 			children = (
+				EEC2395C2217315300421026 /* Views */,
 				EEC239572216703400421026 /* Controllers */,
 				EEC23954221662C200421026 /* Model */,
 				EEC23951221661F300421026 /* Service */,
@@ -92,6 +97,15 @@
 				EEC239412216615500421026 /* ViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		EEC2395C2217315300421026 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EEC239582217314D00421026 /* DetailViewController.swift */,
+				EEC239592217314E00421026 /* DetailViewController.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +169,7 @@
 				EEC2394A2216615600421026 /* LaunchScreen.storyboard in Resources */,
 				EEC239472216615600421026 /* Assets.xcassets in Resources */,
 				EEC239452216615500421026 /* Main.storyboard in Resources */,
+				EEC2395B2217314E00421026 /* DetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +182,7 @@
 			files = (
 				EEC23956221662D200421026 /* Song.swift in Sources */,
 				EEC239422216615500421026 /* ViewController.swift in Sources */,
+				EEC2395A2217314E00421026 /* DetailViewController.swift in Sources */,
 				EEC239402216615500421026 /* AppDelegate.swift in Sources */,
 				EEC239532216620400421026 /* SongService.swift in Sources */,
 			);

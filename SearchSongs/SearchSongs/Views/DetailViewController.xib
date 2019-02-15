@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController" customModule="SearchSongs" customModuleProvider="target">
+            <connections>
+                <outlet property="backButton" destination="xsG-sc-72k" id="ctS-lH-tbq"/>
+                <outlet property="favButton" destination="WCw-A8-iZb" id="buP-Ss-Jdh"/>
+                <outlet property="lyricsTextView" destination="hVR-qx-Tho" id="hKy-oo-6La"/>
+                <outlet property="lyricsView" destination="3g6-De-Rc0" id="O7a-gP-be9"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3g6-De-Rc0">
+                    <rect key="frame" x="10" y="85" width="355" height="482"/>
+                    <subviews>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="hVR-qx-Tho">
+                            <rect key="frame" x="10" y="79" width="335" height="393"/>
+                            <color key="backgroundColor" red="0.88627450980392153" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                            <color key="textColor" red="0.24408470151759332" green="0.31647151154982539" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WCw-A8-iZb">
+                            <rect key="frame" x="200" y="35.5" width="145" height="30"/>
+                            <color key="backgroundColor" red="0.25098039215686274" green="0.31764705882352939" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="145" id="KY2-la-KVZ"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                            <state key="normal" title="Agregar a Favoritos">
+                                <color key="titleColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xsG-sc-72k">
+                            <rect key="frame" x="105" y="35.5" width="80" height="30"/>
+                            <color key="backgroundColor" red="0.25098039220000001" green="0.31764705879999999" blue="0.30588235289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="80" id="Xq5-Aw-qqa"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                            <state key="normal" title="Regresar">
+                                <color key="titleColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="backAction:" destination="-1" eventType="touchUpInside" id="LWC-SE-bw6"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H5w-3m-Ac0">
+                            <rect key="frame" x="10" y="30" width="74" height="41"/>
+                            <attributedString key="attributedText">
+                                <fragment content="Lyrics">
+                                    <attributes>
+                                        <color key="NSColor" red="0.18431372549019609" green="0.53725490196078429" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <font key="NSFont" size="30" name="AvenirNextCondensed-Heavy"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.88627450980392153" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="hVR-qx-Tho" firstAttribute="top" secondItem="H5w-3m-Ac0" secondAttribute="bottom" constant="8" id="5kG-XG-pt4"/>
+                        <constraint firstItem="WCw-A8-iZb" firstAttribute="height" secondItem="xsG-sc-72k" secondAttribute="height" id="8vN-Nf-cib"/>
+                        <constraint firstItem="hVR-qx-Tho" firstAttribute="leading" secondItem="3g6-De-Rc0" secondAttribute="leading" constant="10" id="CIK-hJ-bxp"/>
+                        <constraint firstAttribute="bottom" secondItem="hVR-qx-Tho" secondAttribute="bottom" constant="10" id="LLP-oa-Dwv"/>
+                        <constraint firstAttribute="trailing" secondItem="hVR-qx-Tho" secondAttribute="trailing" constant="10" id="Lbh-lk-wwd"/>
+                        <constraint firstItem="xsG-sc-72k" firstAttribute="centerY" secondItem="H5w-3m-Ac0" secondAttribute="centerY" id="Nt2-tX-py2"/>
+                        <constraint firstItem="H5w-3m-Ac0" firstAttribute="top" secondItem="3g6-De-Rc0" secondAttribute="top" constant="30" id="Q0u-yO-xgZ"/>
+                        <constraint firstAttribute="trailing" secondItem="WCw-A8-iZb" secondAttribute="trailing" constant="10" id="aD3-dt-hDq"/>
+                        <constraint firstItem="WCw-A8-iZb" firstAttribute="leading" secondItem="xsG-sc-72k" secondAttribute="trailing" constant="15" id="fJb-CO-dMt"/>
+                        <constraint firstItem="WCw-A8-iZb" firstAttribute="centerY" secondItem="H5w-3m-Ac0" secondAttribute="centerY" id="o80-hB-CbF"/>
+                        <constraint firstItem="H5w-3m-Ac0" firstAttribute="leading" secondItem="3g6-De-Rc0" secondAttribute="leading" constant="10" id="z6A-9u-uCH"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="3g6-De-Rc0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="3MT-5p-KOo"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="3g6-De-Rc0" secondAttribute="bottom" constant="100" id="Dfq-WD-JlC"/>
+                <constraint firstAttribute="trailing" secondItem="3g6-De-Rc0" secondAttribute="trailing" constant="10" id="FWY-nW-UEl"/>
+                <constraint firstItem="3g6-De-Rc0" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="65" id="qxd-hr-fKt"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="138.40000000000001" y="128.18590704647679"/>
+        </view>
+    </objects>
+</document>

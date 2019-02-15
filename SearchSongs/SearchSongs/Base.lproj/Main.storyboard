@@ -31,19 +31,33 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingresa un Artista" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OOm-Rr-Wq5">
-                                <rect key="frame" x="16" y="192" width="343" height="30"/>
+                                <rect key="frame" x="16" y="212" width="343" height="30"/>
                                 <color key="textColor" red="0.18823529411764706" green="0.8901960784313725" blue="0.792156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingresa una Canción" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4KL-Ll-6DG">
-                                <rect key="frame" x="16" y="268" width="343" height="30"/>
+                                <rect key="frame" x="16" y="288" width="343" height="30"/>
                                 <color key="textColor" red="0.18823529411764706" green="0.8901960784313725" blue="0.792156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qjf-53-ubS">
+                                <rect key="frame" x="112" y="388" width="150" height="40"/>
+                                <color key="backgroundColor" red="0.25098039215686274" green="0.31764705882352939" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Qjf-53-ubS" secondAttribute="height" multiplier="15:4" id="uC0-ev-L9p"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <state key="normal" title="Search">
+                                    <color key="titleColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="searchSong:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zZ1-UU-o9F"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EBt-UG-2SU">
-                                <rect key="frame" x="16" y="161" width="343" height="28"/>
+                                <rect key="frame" x="16" y="181" width="343" height="28"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Singer">
                                         <attributes>
@@ -55,7 +69,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GTZ-i0-l6w">
-                                <rect key="frame" x="16" y="237" width="343" height="28"/>
+                                <rect key="frame" x="16" y="257" width="343" height="28"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Song">
                                         <attributes>
@@ -66,34 +80,37 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qjf-53-ubS">
-                                <rect key="frame" x="112" y="348" width="150" height="40"/>
-                                <color key="backgroundColor" red="0.25098039215686274" green="0.31764705882352939" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-sunny-cloud-4" translatesAutoresizingMaskIntoConstraints="NO" id="n6l-oR-OF7">
+                                <rect key="frame" x="16" y="463" width="142" height="71"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="Qjf-53-ubS" secondAttribute="height" multiplier="15:4" id="uC0-ev-L9p"/>
+                                    <constraint firstAttribute="width" secondItem="n6l-oR-OF7" secondAttribute="height" multiplier="2:1" id="C2c-iC-SdF"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Search">
-                                    <color key="titleColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="searchSong:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zZ1-UU-o9F"/>
-                                </connections>
-                            </button>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-sunny-cloud-3" translatesAutoresizingMaskIntoConstraints="NO" id="aBZ-X6-OfA">
+                                <rect key="frame" x="267" y="544" width="92" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="aBZ-X6-OfA" secondAttribute="height" multiplier="92:53" id="r11-b5-IRZ"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.88627450980392153" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="GTZ-i0-l6w" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="3bX-Xg-EXS"/>
+                            <constraint firstItem="n6l-oR-OF7" firstAttribute="top" secondItem="Qjf-53-ubS" secondAttribute="bottom" constant="35" id="Cnp-7K-GBs"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4KL-Ll-6DG" secondAttribute="trailing" constant="16" id="GDu-FR-evA"/>
-                            <constraint firstItem="EBt-UG-2SU" firstAttribute="top" secondItem="J2Y-Fg-xQG" secondAttribute="bottom" constant="40" id="GI8-IH-9kT"/>
+                            <constraint firstItem="EBt-UG-2SU" firstAttribute="top" secondItem="J2Y-Fg-xQG" secondAttribute="bottom" constant="60" id="GI8-IH-9kT"/>
                             <constraint firstItem="GTZ-i0-l6w" firstAttribute="top" secondItem="OOm-Rr-Wq5" secondAttribute="bottom" constant="15" id="H4m-Mt-01v"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aBZ-X6-OfA" secondAttribute="bottom" constant="70" id="KiW-tu-DeB"/>
                             <constraint firstItem="EBt-UG-2SU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="NPg-GC-fbm"/>
+                            <constraint firstItem="n6l-oR-OF7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Ru3-gN-9l6"/>
                             <constraint firstItem="OOm-Rr-Wq5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="TBX-aL-J7F"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EBt-UG-2SU" secondAttribute="trailing" constant="16" id="Us3-nN-hwr"/>
+                            <constraint firstItem="aBZ-X6-OfA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="267" id="Uzj-2i-Lty"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="J2Y-Fg-xQG" secondAttribute="trailing" constant="50" id="YCA-cU-Ocn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="n6l-oR-OF7" secondAttribute="trailing" constant="217" id="Z5O-fj-uwl"/>
                             <constraint firstItem="4KL-Ll-6DG" firstAttribute="top" secondItem="GTZ-i0-l6w" secondAttribute="bottom" constant="3" id="awe-Ke-ExP"/>
-                            <constraint firstItem="Qjf-53-ubS" firstAttribute="top" secondItem="4KL-Ll-6DG" secondAttribute="bottom" constant="50" id="bEV-B3-8eH"/>
+                            <constraint firstItem="Qjf-53-ubS" firstAttribute="top" secondItem="4KL-Ll-6DG" secondAttribute="bottom" constant="70" id="bEV-B3-8eH"/>
                             <constraint firstItem="J2Y-Fg-xQG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="jpb-ea-Ldo"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OOm-Rr-Wq5" secondAttribute="trailing" constant="16" id="o3C-5g-WI4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GTZ-i0-l6w" secondAttribute="trailing" constant="16" id="quR-XK-Oel"/>
@@ -102,6 +119,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qjf-53-ubS" secondAttribute="trailing" constant="113" id="s8T-G5-doV"/>
                             <constraint firstItem="Qjf-53-ubS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="112" id="vL5-qh-aot"/>
                             <constraint firstItem="4KL-Ll-6DG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="vhD-gU-7Co"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aBZ-X6-OfA" secondAttribute="trailing" constant="16" id="xLh-Hh-LbG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <connections>
@@ -110,6 +128,8 @@
                     </view>
                     <connections>
                         <outlet property="artistTextField" destination="OOm-Rr-Wq5" id="rgA-bU-73m"/>
+                        <outlet property="cloud3" destination="aBZ-X6-OfA" id="X2L-VN-Lms"/>
+                        <outlet property="cloud4" destination="n6l-oR-OF7" id="oo8-EC-ekj"/>
                         <outlet property="searchButton" destination="Qjf-53-ubS" id="4tj-4B-9kO"/>
                         <outlet property="songTextField" destination="4KL-Ll-6DG" id="3ZT-8s-ujn"/>
                     </connections>
@@ -124,4 +144,8 @@
             <point key="canvasLocation" x="136.80000000000001" y="120.98950524737631"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bg-sunny-cloud-3" width="74" height="35"/>
+        <image name="bg-sunny-cloud-4" width="115" height="50"/>
+    </resources>
 </document>

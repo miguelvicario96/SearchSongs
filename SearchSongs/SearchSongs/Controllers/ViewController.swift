@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var artistTextField: UITextField?
     @IBOutlet weak var songTextField: UITextField?
     @IBOutlet weak var searchButton: UIButton!
+    @IBOutlet weak var cloud3: UIImageView!
+    @IBOutlet weak var cloud4: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +24,19 @@ class ViewController: UIViewController {
 
         artistTextField?.delegate = self
         songTextField?.delegate = self
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        UIView.animate(withDuration: 8, delay: 0.1, options:
+            [.autoreverse, .curveEaseInOut, .repeat], animations: {
+
+            self.cloud3.center.x -= self.view.bounds.width / 1.6
+            self.cloud4.center.x += self.view.bounds.width / 1.6
+        },
+            completion: nil
+        )
     }
 
     @IBAction func searchSong(_ sender: UIButton) {
@@ -40,6 +55,13 @@ class ViewController: UIViewController {
                     alert.addAction(okAction)
                     self.present(alert, animated: true)
                 }
+                let detailView = DetailViewController(nibName: "DetailViewController", bundle: nil)
+                detailView.modalPresentationStyle = .overFullScreen
+                self.present(detailView, animated: true, completion: nil)
+                detailView.lyricsTextView.text = result.lyrics
+                
+                self.artistTextField?.text = ""
+                self.songTextField?.text = ""
             }
             print(result)
         }
@@ -56,4 +78,5 @@ extension ViewController: UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
+
 }
