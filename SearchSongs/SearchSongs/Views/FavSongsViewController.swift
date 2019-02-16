@@ -80,6 +80,8 @@ extension FavSongsViewController: UITableViewDelegate {
         detailView.songLabel.text = favSongs[indexPath.row].title
         detailView.lyricsTextView.text = favSongs[indexPath.row].lyrics
         detailView.favButton.isHidden = true
+        
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {

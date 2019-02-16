@@ -13,7 +13,9 @@ class SongService {
     static var urlSession = URLSession(configuration: .default)
     
     static func fetchLyrics(artist: String, title: String, onSuccess: @escaping (Song) -> Void){
-        let url = URL(string: "https://api.lyrics.ovh/v1/\(artist)/\(title)")
+        let artistEncoded = artist.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
+        let titleEncoded = title.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
+        let url = URL(string: "https://api.lyrics.ovh/v1/\(artistEncoded!)/\(titleEncoded!)")
         
         let dataTask = urlSession.dataTask(with: url!){data, response, error in
             if error == nil{
@@ -22,6 +24,9 @@ class SongService {
                     guard let json = parseData(data: data!) else { return }
                     let song = songFrom(artist: artist, title: title, lyrics: json)
                     onSuccess(song)
+                } else {
+                    let song = Song.create(artist: artist, title: title, lyrics: "")
+                    onSuccess(song!)
                 }
             }
         }

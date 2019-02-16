@@ -53,6 +53,7 @@ class ViewController: UIViewController {
             DispatchQueue.main.async {
                 if result.lyrics == "" {
                     self.showAlert()
+                    UIApplication.shared.isNetworkActivityIndicatorVisible = false
                 } else {
                 let detailView = DetailViewController(nibName: "DetailViewController", bundle: nil)
                 detailView.modalPresentationStyle = .overFullScreen
