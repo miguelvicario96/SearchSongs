@@ -12,10 +12,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController" customModule="SearchSongs" customModuleProvider="target">
             <connections>
+                <outlet property="artistLabel" destination="GaC-6a-cdC" id="UBa-bv-Ulg"/>
                 <outlet property="backButton" destination="xsG-sc-72k" id="ctS-lH-tbq"/>
-                <outlet property="favButton" destination="WCw-A8-iZb" id="buP-Ss-Jdh"/>
+                <outlet property="favButton" destination="WCw-A8-iZb" id="o0E-dh-gZa"/>
                 <outlet property="lyricsTextView" destination="hVR-qx-Tho" id="hKy-oo-6La"/>
                 <outlet property="lyricsView" destination="3g6-De-Rc0" id="O7a-gP-be9"/>
+                <outlet property="songLabel" destination="ZTM-Xe-3xG" id="F8K-0i-ehX"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -25,10 +27,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3g6-De-Rc0">
-                    <rect key="frame" x="10" y="85" width="355" height="482"/>
+                    <rect key="frame" x="10" y="85" width="355" height="512"/>
                     <subviews>
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="hVR-qx-Tho">
-                            <rect key="frame" x="10" y="79" width="335" height="393"/>
+                            <rect key="frame" x="10" y="137" width="335" height="365"/>
                             <color key="backgroundColor" red="0.88627450980392153" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                             <color key="textColor" red="0.24408470151759332" green="0.31647151154982539" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -45,6 +47,9 @@
                             <state key="normal" title="Agregar a Favoritos">
                                 <color key="titleColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
+                            <connections>
+                                <action selector="favAction:" destination="-1" eventType="touchUpInside" id="4Uz-c3-dNP"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xsG-sc-72k">
                             <rect key="frame" x="105" y="35.5" width="80" height="30"/>
@@ -72,26 +77,44 @@
                             </attributedString>
                             <nil key="highlightedColor"/>
                         </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GaC-6a-cdC">
+                            <rect key="frame" x="10" y="79" width="335" height="21"/>
+                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                            <color key="textColor" red="0.18431372549019609" green="0.53725490196078429" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZTM-Xe-3xG">
+                            <rect key="frame" x="10" y="108" width="335" height="21"/>
+                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                            <color key="textColor" red="0.1843137255" green="0.53725490200000003" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" red="0.88627450980392153" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstItem="hVR-qx-Tho" firstAttribute="top" secondItem="H5w-3m-Ac0" secondAttribute="bottom" constant="8" id="5kG-XG-pt4"/>
+                        <constraint firstItem="hVR-qx-Tho" firstAttribute="leading" secondItem="3g6-De-Rc0" secondAttribute="leading" constant="10" id="3pu-Nj-ISW"/>
                         <constraint firstItem="WCw-A8-iZb" firstAttribute="height" secondItem="xsG-sc-72k" secondAttribute="height" id="8vN-Nf-cib"/>
-                        <constraint firstItem="hVR-qx-Tho" firstAttribute="leading" secondItem="3g6-De-Rc0" secondAttribute="leading" constant="10" id="CIK-hJ-bxp"/>
-                        <constraint firstAttribute="bottom" secondItem="hVR-qx-Tho" secondAttribute="bottom" constant="10" id="LLP-oa-Dwv"/>
-                        <constraint firstAttribute="trailing" secondItem="hVR-qx-Tho" secondAttribute="trailing" constant="10" id="Lbh-lk-wwd"/>
+                        <constraint firstAttribute="bottom" secondItem="hVR-qx-Tho" secondAttribute="bottom" constant="10" id="F55-6p-e3T"/>
+                        <constraint firstAttribute="trailing" secondItem="ZTM-Xe-3xG" secondAttribute="trailing" constant="10" id="NMa-7F-huz"/>
                         <constraint firstItem="xsG-sc-72k" firstAttribute="centerY" secondItem="H5w-3m-Ac0" secondAttribute="centerY" id="Nt2-tX-py2"/>
+                        <constraint firstItem="ZTM-Xe-3xG" firstAttribute="leading" secondItem="3g6-De-Rc0" secondAttribute="leading" constant="10" id="OOR-zI-ZoU"/>
                         <constraint firstItem="H5w-3m-Ac0" firstAttribute="top" secondItem="3g6-De-Rc0" secondAttribute="top" constant="30" id="Q0u-yO-xgZ"/>
+                        <constraint firstItem="hVR-qx-Tho" firstAttribute="top" secondItem="ZTM-Xe-3xG" secondAttribute="bottom" constant="8" id="VOO-K9-ynz"/>
                         <constraint firstAttribute="trailing" secondItem="WCw-A8-iZb" secondAttribute="trailing" constant="10" id="aD3-dt-hDq"/>
+                        <constraint firstAttribute="trailing" secondItem="GaC-6a-cdC" secondAttribute="trailing" constant="10" id="bJd-R7-f22"/>
+                        <constraint firstItem="GaC-6a-cdC" firstAttribute="leading" secondItem="3g6-De-Rc0" secondAttribute="leading" constant="10" id="ck6-bx-KeG"/>
                         <constraint firstItem="WCw-A8-iZb" firstAttribute="leading" secondItem="xsG-sc-72k" secondAttribute="trailing" constant="15" id="fJb-CO-dMt"/>
+                        <constraint firstItem="GaC-6a-cdC" firstAttribute="top" secondItem="H5w-3m-Ac0" secondAttribute="bottom" constant="8" id="hGz-t9-ajZ"/>
+                        <constraint firstAttribute="trailing" secondItem="hVR-qx-Tho" secondAttribute="trailing" constant="10" id="nhy-kR-G1h"/>
                         <constraint firstItem="WCw-A8-iZb" firstAttribute="centerY" secondItem="H5w-3m-Ac0" secondAttribute="centerY" id="o80-hB-CbF"/>
+                        <constraint firstItem="ZTM-Xe-3xG" firstAttribute="top" secondItem="GaC-6a-cdC" secondAttribute="bottom" constant="8" id="pxi-Ij-PjA"/>
                         <constraint firstItem="H5w-3m-Ac0" firstAttribute="leading" secondItem="3g6-De-Rc0" secondAttribute="leading" constant="10" id="z6A-9u-uCH"/>
                     </constraints>
                 </view>
             </subviews>
             <constraints>
                 <constraint firstItem="3g6-De-Rc0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="3MT-5p-KOo"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="3g6-De-Rc0" secondAttribute="bottom" constant="100" id="Dfq-WD-JlC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="3g6-De-Rc0" secondAttribute="bottom" constant="70" id="Dfq-WD-JlC"/>
                 <constraint firstAttribute="trailing" secondItem="3g6-De-Rc0" secondAttribute="trailing" constant="10" id="FWY-nW-UEl"/>
                 <constraint firstItem="3g6-De-Rc0" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="65" id="qxd-hr-fKt"/>
             </constraints>

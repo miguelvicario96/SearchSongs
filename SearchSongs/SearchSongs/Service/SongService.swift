@@ -20,10 +20,8 @@ class SongService {
                 guard let statusCode = (response as? HTTPURLResponse)?.statusCode else { return }
                 if statusCode == 200{
                     guard let json = parseData(data: data!) else { return }
-                    //print(json)
                     let song = songFrom(artist: artist, title: title, lyrics: json)
                     onSuccess(song)
-                    //print(song)
                 }
             }
         }

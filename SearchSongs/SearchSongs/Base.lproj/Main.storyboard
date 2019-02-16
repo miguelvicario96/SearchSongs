@@ -30,13 +30,13 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingresa un Artista" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OOm-Rr-Wq5">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a Singer or Band" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OOm-Rr-Wq5">
                                 <rect key="frame" x="16" y="212" width="343" height="30"/>
                                 <color key="textColor" red="0.18823529411764706" green="0.8901960784313725" blue="0.792156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingresa una Canción" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4KL-Ll-6DG">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a Song" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4KL-Ll-6DG">
                                 <rect key="frame" x="16" y="288" width="343" height="30"/>
                                 <color key="textColor" red="0.18823529411764706" green="0.8901960784313725" blue="0.792156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
@@ -92,10 +92,26 @@
                                     <constraint firstAttribute="width" secondItem="aBZ-X6-OfA" secondAttribute="height" multiplier="92:53" id="r11-b5-IRZ"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Wi1-ue-OIM">
+                                <rect key="frame" x="16" y="567" width="70" height="70"/>
+                                <color key="backgroundColor" red="1" green="0.77647058823529413" blue="0.043137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Wi1-ue-OIM" secondAttribute="height" multiplier="1:1" id="AEm-n3-B7E"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <inset key="titleEdgeInsets" minX="2" minY="0.0" maxX="2" maxY="0.0"/>
+                                <state key="normal" title="My Lyrics">
+                                    <color key="titleColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="favAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lej-Ir-Fsr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.88627450980392153" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Wi1-ue-OIM" secondAttribute="bottom" constant="30" id="04I-MX-nQB"/>
                             <constraint firstItem="GTZ-i0-l6w" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="3bX-Xg-EXS"/>
                             <constraint firstItem="n6l-oR-OF7" firstAttribute="top" secondItem="Qjf-53-ubS" secondAttribute="bottom" constant="35" id="Cnp-7K-GBs"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4KL-Ll-6DG" secondAttribute="trailing" constant="16" id="GDu-FR-evA"/>
@@ -107,6 +123,7 @@
                             <constraint firstItem="OOm-Rr-Wq5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="TBX-aL-J7F"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EBt-UG-2SU" secondAttribute="trailing" constant="16" id="Us3-nN-hwr"/>
                             <constraint firstItem="aBZ-X6-OfA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="267" id="Uzj-2i-Lty"/>
+                            <constraint firstItem="Wi1-ue-OIM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="WiL-Qd-L7k"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="J2Y-Fg-xQG" secondAttribute="trailing" constant="50" id="YCA-cU-Ocn"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="n6l-oR-OF7" secondAttribute="trailing" constant="217" id="Z5O-fj-uwl"/>
                             <constraint firstItem="4KL-Ll-6DG" firstAttribute="top" secondItem="GTZ-i0-l6w" secondAttribute="bottom" constant="3" id="awe-Ke-ExP"/>
@@ -117,6 +134,7 @@
                             <constraint firstItem="J2Y-Fg-xQG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="raj-wg-jOm"/>
                             <constraint firstItem="OOm-Rr-Wq5" firstAttribute="top" secondItem="EBt-UG-2SU" secondAttribute="bottom" constant="3" id="rvC-1v-kgZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qjf-53-ubS" secondAttribute="trailing" constant="113" id="s8T-G5-doV"/>
+                            <constraint firstItem="aBZ-X6-OfA" firstAttribute="leading" secondItem="Wi1-ue-OIM" secondAttribute="trailing" constant="181" id="tdD-ci-ncv"/>
                             <constraint firstItem="Qjf-53-ubS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="112" id="vL5-qh-aot"/>
                             <constraint firstItem="4KL-Ll-6DG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="vhD-gU-7Co"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aBZ-X6-OfA" secondAttribute="trailing" constant="16" id="xLh-Hh-LbG"/>
@@ -130,6 +148,7 @@
                         <outlet property="artistTextField" destination="OOm-Rr-Wq5" id="rgA-bU-73m"/>
                         <outlet property="cloud3" destination="aBZ-X6-OfA" id="X2L-VN-Lms"/>
                         <outlet property="cloud4" destination="n6l-oR-OF7" id="oo8-EC-ekj"/>
+                        <outlet property="favButton" destination="Wi1-ue-OIM" id="hx8-Fz-7Vm"/>
                         <outlet property="searchButton" destination="Qjf-53-ubS" id="4tj-4B-9kO"/>
                         <outlet property="songTextField" destination="4KL-Ll-6DG" id="3ZT-8s-ujn"/>
                     </connections>
