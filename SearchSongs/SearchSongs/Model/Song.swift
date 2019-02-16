@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Song {
+struct Song {   //Modelo usado para guardar información de la API
     
     var artist: String
     var title: String

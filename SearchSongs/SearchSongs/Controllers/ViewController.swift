@@ -21,17 +21,17 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        favButton.layer.cornerRadius = 5
+        favButton.layer.cornerRadius = 5    //Configuración de botón favButton
         favButton.layer.masksToBounds = true
         
-        searchButton.layer.cornerRadius = 10
+        searchButton.layer.cornerRadius = 10 //Configuración de botón searchButton
         searchButton.layer.masksToBounds = true
 
         artistTextField?.delegate = self
         songTextField?.delegate = self
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) { //Animación de Nubes
         super.viewDidAppear(animated)
         
         UIView.animate(withDuration: 8, delay: 0.1, options:
@@ -44,27 +44,26 @@ class ViewController: UIViewController {
         )
     }
 
-    @IBAction func searchSong(_ sender: UIButton) {
-        UIApplication.shared.isNetworkActivityIndicatorVisible = true
-        let artist = artistTextField?.text?.replacingOccurrences(of: " ", with: "_")
-        let title = songTextField?.text?.replacingOccurrences(of: " ", with: "_")
-        SongService.fetchLyrics(artist: artist ?? "", title: title ?? "")
+    @IBAction func searchSong(_ sender: UIButton) { //Fetch de los datos de la API
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true   //Indicador de carga true
+        SongService.fetchLyrics(artist: artistTextField?.text ?? "", title: songTextField?.text ?? "")
         {(result: Song) in
-            DispatchQueue.main.async {
-                if result.lyrics == "" {
-                    self.showAlert()
-                    UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            DispatchQueue.main.async {  //Resultados
+                if result.lyrics == "" {    //En caso de que devuelva un objeto sin lyrics mandar alerta
+                    self.showAlert()    //Manda a llamar la alerta
+                    UIApplication.shared.isNetworkActivityIndicatorVisible = false //Indicador de carga flase
                 } else {
                 let detailView = DetailViewController(nibName: "DetailViewController", bundle: nil)
                 detailView.modalPresentationStyle = .overFullScreen
-                self.present(detailView, animated: true, completion: nil)
+                self.present(detailView, animated: true, completion: nil) //Presentación modal de view DetailView
                 
+                //Inserción de datos en view siguiente
                 detailView.artistLabel.text = self.artistTextField?.text?.capitalized
                 detailView.songLabel.text = self.songTextField?.text?.capitalized
                 detailView.lyricsTextView.text = result.lyrics
                 UIApplication.shared.isNetworkActivityIndicatorVisible = false
                     
-                self.artistTextField?.text = ""
+                self.artistTextField?.text = "" //Limpia textfields
                 self.songTextField?.text = ""
                 }
             }
@@ -74,18 +73,18 @@ class ViewController: UIViewController {
     @IBAction func favAction(_ sender: UIButton) {
         let favSongsView = FavSongsViewController(nibName: "FavSongsViewController", bundle: nil)
         favSongsView.modalTransitionStyle = .flipHorizontal
-        self.present(favSongsView, animated: true, completion: nil)
+        self.present(favSongsView, animated: true, completion: nil) //Presentación modal de view FavSongs
         
-        artistTextField?.text = ""
+        artistTextField?.text = "" //Limpia textfields
         songTextField?.text = ""
     }
     
-    @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
+    @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {  //Dismiss keyboard con TapRecognizer
         artistTextField?.resignFirstResponder()
         songTextField?.resignFirstResponder()
     }
     
-    func showAlert() {
+    func showAlert() {  //Función de alerta
         let alert = UIAlertController(title: "No se encontro letra",
                                       message: "",
                                       preferredStyle: .alert)
@@ -95,7 +94,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UITextFieldDelegate {
+extension ViewController: UITextFieldDelegate { //Delegate de TextField para el dismiss con el botón de Intro
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true

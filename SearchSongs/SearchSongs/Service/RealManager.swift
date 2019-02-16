@@ -9,24 +9,24 @@
 import Foundation
 import  RealmSwift
 
-class RealmManager {
+class RealmManager {    //Clase con funciones hechas para utilizar Realm
     let realm = try? Realm()
     
-    // delete table
-    func deleteDatabase() {
-        try! realm?.write({
-            realm?.deleteAll()
-        })
-    }
+    //Borrar tabla
+//    func deleteDatabase() {
+//        try! realm?.write({
+//            realm?.deleteAll()
+//        })
+//    }
     
-    // delete particular object
+    //Borrar objecto
     func deleteObject(objs : Object) {
         try? realm!.write ({
             realm?.delete(objs)
         })
     }
     
-    //Save array of objects to database
+    //Guardar objetos
     func saveObjects(objs: Object) {
         try? realm!.write ({
             // If update = false, adds the object
@@ -34,16 +34,16 @@ class RealmManager {
         })
     }
     
-    // editing the object
-    func editObjects(objs: Object) {
-        try? realm!.write ({
-            // If update = true, objects that are already in the Realm will be
-            // updated instead of added a new.
-            realm?.add(objs, update: true)
-        })
-    }
+    //Editar Objetos
+//    func editObjects(objs: Object) {
+//        try? realm!.write ({
+//            // If update = true, objects that are already in the Realm will be
+//            // updated instead of added a new.
+//            realm?.add(objs, update: true)
+//        })
+//    }
     
-    //Returs an array as Results<object>?
+    //Devuelve un array como Results<object>?
     func getObjects(type: Object.Type) -> Results<Object>? {
         return realm!.objects(type)
     }
@@ -51,5 +51,4 @@ class RealmManager {
     func incrementID() -> Int {
         return (realm!.objects(FavSongs.self).max(ofProperty: "id") as Int? ?? 0) + 1
     }
-    
 }

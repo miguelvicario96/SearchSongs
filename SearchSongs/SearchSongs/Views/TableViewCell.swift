@@ -15,7 +15,7 @@ class TableViewCell: UITableViewCell {
         
     }
     
-    func setData(song: String, artist: String){
+    func setData(song: String, artist: String){ //Set data proveniente de la vista que contiene la tabla
         textLabel?.text = song
         detailTextLabel?.text = artist
     }

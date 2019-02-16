@@ -9,7 +9,8 @@
 import Foundation
 import RealmSwift
 
-class FavSongs: Object {
+
+class FavSongs: Object {    //Clase hecha para los objetos que Realm va a guardar
     
     @objc private(set) dynamic var id = 0
     @objc dynamic var artist: String = ""
