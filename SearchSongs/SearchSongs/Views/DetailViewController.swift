@@ -23,22 +23,8 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
-        
-        lyricsView.layer.cornerRadius = 10  //Configuración de lyricView
-        lyricsView.layer.masksToBounds = true
-        
-        favButton.layer.cornerRadius = 10   //Configuración de botón favButton
-        favButton.layer.masksToBounds = true
-        
-        backButton.layer.cornerRadius = 10  //Configuración de botón backButton
-        backButton.layer.masksToBounds = true
-       
-        lyricsTextView.isEditable = false   //Configuración lyricsTextView
-        
-        lyricsTextView.flashScrollIndicators()  //Scroll Indicator
     
+        uiConfiguration()
         realm = try! Realm()
     }
     
@@ -70,5 +56,22 @@ class DetailViewController: UIViewController {
         
         alert.addAction(okAction)
         self.present(alert, animated: true) //Presentación de alerta
+    }
+    
+    func uiConfiguration() {
+        view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
+        
+        lyricsView.layer.cornerRadius = 10  //Configuración de lyricView
+        lyricsView.layer.masksToBounds = true
+        
+        favButton.layer.cornerRadius = 10   //Configuración de botón favButton
+        favButton.layer.masksToBounds = true
+        
+        backButton.layer.cornerRadius = 10  //Configuración de botón backButton
+        backButton.layer.masksToBounds = true
+        
+        lyricsTextView.isEditable = false   //Configuración lyricsTextView
+        
+        lyricsTextView.flashScrollIndicators()  //Scroll Indicator
     }
 }

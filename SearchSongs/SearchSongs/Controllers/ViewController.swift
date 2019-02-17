@@ -20,13 +20,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        favButton.layer.cornerRadius = 5    //Configuración de botón favButton
-        favButton.layer.masksToBounds = true
-        
-        searchButton.layer.cornerRadius = 10 //Configuración de botón searchButton
-        searchButton.layer.masksToBounds = true
 
+        uiConfiguration()
+        
         artistTextField?.delegate = self
         songTextField?.delegate = self
     }
@@ -91,6 +87,17 @@ class ViewController: UIViewController {
         
         alert.addAction(UIAlertAction(title: "Ok",style: .default))
         self.present(alert, animated: true)
+    }
+    
+    func uiConfiguration() {
+        //Configuración de botón favButton
+        favButton.layer.borderColor = UIColor(red:0.27, green:0.27, blue:0.27, alpha:1.0).cgColor
+        favButton.layer.borderWidth = 2
+        favButton.layer.cornerRadius = 5
+        favButton.layer.masksToBounds = true
+        
+        searchButton.layer.cornerRadius = 10 //Configuración de botón searchButton
+        searchButton.layer.masksToBounds = true
     }
 }
 

@@ -20,9 +20,8 @@ class FavSongsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        favButton.layer.cornerRadius = 10   //Configuración de botón favButton
-        favButton.layer.masksToBounds = true
+        
+        uiConfiguration()
         
         self.tableView.dataSource = self    //TableView conforma protocolo DataSource
         self.tableView.delegate = self  //TableView conforma protocolo Delegate
@@ -51,6 +50,11 @@ class FavSongsViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    func uiConfiguration() {
+        favButton.layer.cornerRadius = 10   //Configuración de botón favButton
+        favButton.layer.masksToBounds = true
     }
 }
 
